@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin cá nhân"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Họ và tên -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Họ và tên" />
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập họ và tên"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Tuổi -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Tuổi" />
+        <EditText
+            android:id="@+id/edtAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tuổi"
+            android:inputType="number"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Giới tính (RadioGroup) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Giới tính" />
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <RadioButton android:id="@+id/rbMale" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Nam"/>
+            <RadioButton android:id="@+id/rbFemale" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Nữ"/>
+            <RadioButton android:id="@+id/rbOther" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Khác"/>
+        </RadioGroup>
+
+        <!-- Sở thích (checkbox) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Sở thích (chọn nhiều)" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginBottom="16dp">
+            <CheckBox android:id="@+id/cbSport" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Thể thao"/>
+            <CheckBox android:id="@+id/cbTravel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Du lịch"/>
+            <CheckBox android:id="@+id/cbMusic" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Âm nhạc"/>
+        </LinearLayout>
+
+        <!-- Nút gửi -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xem thông tin"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>
